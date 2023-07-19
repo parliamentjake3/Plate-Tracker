@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Registration</title>
+    <!-- Water.css template stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+
+<body>
+    <h1>User Registration</h1>
+
+    <form action="/register" method="POST">
+        
+        <!-- Username -->
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"  required><br>
+
+        <!-- Password Confirmation -->
+        <label for="password_confirmation">Re-Enter Password:</label>
+        <input type="password" id="password_confirmation" name="password_confirmation" required><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Register">
+
+        {% if error_message %}
+            <p class="error">{{ error_message }}</p>
+        {% endif %}
+
+    </form>
+</body>
+
+</html>
